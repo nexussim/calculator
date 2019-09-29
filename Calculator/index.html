@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="screen">
+            <input class="screen-display" placeholder="0">
+        </div>
+        <div class="container">    
+            <div>
+                <button type="button" class="row btn clear" id="column-btn" data-num="C">C</button>
+                <button type="button" class="row btn btn-selector delete" id="column-btn">⌫</button>
+                <button type="button" class="row btn btn-selector operand divide" id="column-btn"data-num="÷">÷</button>
+                <button type="button" class="row btn btn-selector operand multiply" id="column-btn"data-num="x">x</button>
+            </div>
+            <div>
+                <button type="button" class="row btn nums" id="column-btn" data-num="1">1</button>
+                <button type="button" class="row btn nums" id="column-btn" data-num="2">2</button>
+                <button type="button" class="row btn nums" id="column-btn" data-num="3">3</button>
+                <button type="button" class="row btn btn-selector operand subtract column" id="column-btn"data-num="-">-</button>
+            </div>
+            <div>
+                <button type="button" class="row btn nums" id="column-btn" data-num="4">4</button>
+                <button type="button" class="row btn nums" id="column-btn" data-num="5">5</button>
+                <button type="button" class="row btn nums" id="column-btn" data-num="6">6</button>
+                <button type="button" class="row btn btn-selector operand plus" id="column-btn"data-num="+">+</button>
+            </div>
+            <div>   
+                <button type="button" class="row btn nums" id="column-btn" data-num="7">7</button>
+                <button type="button" class="row btn nums" id="column-btn" data-num="8">8</button>
+                <button type="button" class="row btn nums" id="column-btn" data-num="9">9</button>
+                <button type="button" class="row btn equals" id="column-btn" data-num="=">=</button>
+            </div>
+            <div>
+                <button type="button" class="row btn nums" id="column-btn"data-num="0">0</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+body {
+    width: 80%;
+    min-height: 100vh;
+    outline: none;
+}
+
+.container {
+    white-space: nowrap;
+    margin-top: 1.5rem;
+    max-width:300px;
+}
+
+.screen {
+    width: 240px;
+    height: 40px;
+    pointer-events: none; 
+}
+
+.screen-display {
+    font-size: 25px;
+    width: 101.5%;
+    height: 3.5rem;
+    border-bottom: none;
+    background: #403e3a;
+    color: white;
+    border-radius: 10px;
+}
+
+.row {
+    width: 80%;
+}
+
+.btn {
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 25px;
+    margin: 2px;
+    margin-right: 0.2px;
+    font-family: "Roboto";
+    border-radius: 10px;
+}
+
+.btn:hover {
+    transition: background-color 0.2s ease;
+    background-color: #8c8680;
+}
+
+.btn[data-num="0"] {
+    width: 243px;
+    margin-top: 3px;
+}
+
+.btn[data-num="C"] {
+    background-color: #ed5f58;
+    border: none;
+}
+
+.btn[data-num="C"]:hover {
+    transition: background-color 0.2s ease;
+    background-color: #8c8680;
+}
+
+.btn[data-num="="] {
+    background-color: #7ecf69;
+    border: none;
+}
+
+.btn[data-num="="]:hover {
+    transition: background-color 0.2s ease;
+    background-color: #8c8680
+}
+
+.btn-selector {
+    background-color: #ff9b30; 
+    border: none;
+}
+
+.nums {
+    background-color: silver;
+    border: none;
+}
+
+.delete {
+    font-size: 20.5px;
+}
+
+
+    
