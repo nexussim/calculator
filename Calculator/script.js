@@ -25,7 +25,9 @@ for (let i = 0; i < operands.length; i++) {
 
 function updateScreen(eventTarget) {
     let value = eventTarget.currentTarget.innerHTML;
+
 /* Determine if the equal button is clicked and evaluate if it is */
+
     if (eventTarget.currentTarget === equalsBtn) {
         let joinedValue = storedValues.join('');
         let calculatedValue = eval(joinedValue);
@@ -39,7 +41,7 @@ function updateScreen(eventTarget) {
     if (eventTarget === operands) {
         screen.value = '';
     } else {
-    screen.value = screenValues;
+        screen.value = screenValues;
     }
 }
 
@@ -76,9 +78,6 @@ function performOperation(eventTarget) {
     }
 }
 
-
-
-
 /* Clear the screens value */
 
 clearBtn.addEventListener('click', function() {
@@ -88,44 +87,12 @@ clearBtn.addEventListener('click', function() {
     }
 });
 
+/* Deletes 1 item from the screen */
 
+deleteBtn.addEventListener('click', function() {
+    storedValues.splice(storedValues.length - 1, 1);
+    let joinedValue = storedValues.join('');
+    screen.value = joinedValue;
+})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Add a value to the display screen
-
-// for (let i = 0; i < numbers.length; i++) {
-//     numbers[i].addEventListener('click', function() {
-//         screen.value = numbers[i].innerHTML;
-//         previousValue = screen.value;
-//         newValue = previousValue + screen.value;   
-//     })
-// }
 
