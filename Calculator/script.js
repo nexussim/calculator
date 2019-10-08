@@ -26,15 +26,38 @@ for (let i = 0; i < operands.length; i++) {
 function updateScreen(eventTarget) {
     let value = eventTarget.currentTarget.innerHTML;
 
-/* Determine if the equal button is clicked and evaluate if it is */
-
     if (eventTarget.currentTarget === equalsBtn) {
+        if (storedValues[storedValues.length - 1] === '+' ) {
+            storedValues.splice(storedValues.length - 1, 1);
+        } else if (storedValues[storedValues.length - 1] === '-') {
+            storedValues.splice(storedValues.length - 1, 1);
+        } else if (storedValues[storedValues.length - 1] === '/') {
+            storedValues.splice(storedValues.length - 1, 1);
+        } else if (storedValues[storedValues.length - 1] === '*') {
+            storedValues.splice(storedValues.length - 1, 1);
+        }
+        
+/* Check if first element in the storedValues array is an number. If it is, evaluate, otherwise clear the screen. */
+
+        let parsedStringValue = parseInt(storedValues[0]);
+        let isNumber = Number.isInteger(parsedStringValue);
+
+        if (isNumber === false) {
+            storedValues = [];
+        } 
+
         let joinedValue = storedValues.join('');
         let calculatedValue = eval(joinedValue);
         screen.value = calculatedValue;
+
+        if(storedValues.length === 0) {
+            screen.value = '';
+        }
+
+        
         return;
     }
-    
+
     storedValues.push(value);
     let screenValues = storedValues.join('');
     
@@ -42,6 +65,12 @@ function updateScreen(eventTarget) {
         screen.value = '';
     } else {
         screen.value = screenValues;
+
+    //     screen.value = eventTarget.currentTarget.innerHTML;
+    
+    // if (eventTarget === operands) {
+    //     screen.value = '';
+    // } 
     }
 }
 

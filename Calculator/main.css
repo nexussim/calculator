@@ -29,6 +29,7 @@ body {
     background: #403e3a;
     color: white;
     border-radius: 10px;
+    text-align: right;
 }
 
 .row {
@@ -51,7 +52,7 @@ body {
 }
 
 .btn[data-num="0"] {
-    width: 243px;
+    width: 180px;
     margin-top: 3px;
 }
 
